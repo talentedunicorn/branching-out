@@ -1,0 +1,14 @@
+
+$susy : (
+	columns: 12,
+	gutters: .25,
+	container: 1200px,
+	global-box-sizing: border-box,
+	
+	debug : (
+		image: show,
+		output: overlay,
+	)
+);
+
+@include global-box-sizing;

@@ -1,0 +1,19 @@
+{
+  "name": "noyzine",
+  "version": "1.0.1",
+  "authors": [
+    "Ezekiel Mangalu <emangalu@gmail.com>"
+  ],
+  "description": "Zine site for Noyz134",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "_normalize.scss": "~2.1.3"
+  }
+}
