@@ -4,8 +4,21 @@
 // init - _init.scss
 @import "init";
 
+// mixins - _mixins.scss
+@import "mixins";
+
 // layout - _layout.scss
 @import "layout";
 
+// typography - _typography.scss
+@import "typography";
+
+// nav - _nav.scss 
+@import "nav";
+
 // form - _form.scss 
 @import "form";
+
+// sections 
+// section-zine - sections/_section-zine.scss
+@import "sections/_section-zine";

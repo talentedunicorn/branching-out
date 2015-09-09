@@ -12,3 +12,11 @@ $susy : (
 );
 
 @include global-box-sizing;
+
+.container {
+	@include container;
+}
+
+.span-full {
+	@include full;
+}

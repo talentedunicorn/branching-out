@@ -1,0 +1,73 @@
+%full-input {
+	display: block;
+	width: 100%;
+}
+
+.form {
+	font-family: $font-family-secondary;
+	font-size: 14px;
+	
+	.form__fieldset, 
+	.form__textfield,
+	.form__textarea {
+		border: none;
+		outline: none;
+	}
+
+	.form__textfield {
+		@extend %full-input;
+		border-bottom: 1px solid $black;
+	}
+
+	.form__textarea {
+		@extend %full-input;
+		border-bottom: 1px solid $black;
+		resize: none;
+	}
+
+	.form__checkbox-label,
+	.form__checkbox {
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
+	.form__checkbox-label {
+		position: relative;
+	}
+
+	.form__checkbox {
+		display: none;
+
+		& + .form__checkbox-label:before {
+			content: '';
+			display: inline-block;
+			background: $white;
+			border: 2px solid $black;
+			vertical-align: middle;
+			width: 1em;
+			height: 1em;
+			margin-right: toEm(5px, 14px);
+			text-align: center;
+		}
+
+		&:checked + .form__checkbox-label:before {
+			background: $black;
+		}
+	}
+
+	.form__button_submit {
+		display: block;
+		font-weight: bold;
+		margin: toEm(20px, 14px) auto;
+		padding: toEm(5px, 14px) toEm(10px, 14px);
+		background: $white;
+		border: 2px solid $black;
+		transition: ease-in-out all 0.2s;
+
+		&:hover {
+			background: $black;
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+// Section: zine
+.section-zine {
+	@extend .container;
+
+	.zine__cover {
+		@extend .span-full;
+
+		.zine__cover-image {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: toEm(50px) auto;
+		}
+	}
+
+	.form-wrapper {
+		width: toEm(300px);
+		margin: auto;
+	}
+}

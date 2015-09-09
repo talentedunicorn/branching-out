@@ -1,0 +1,38 @@
+.nav {
+	@extend .container;
+	font-family: $font-family-secondary;
+	font-size: $nav-font-size;
+	border-bottom: 1px solid rgba($black, .5);
+
+	.logo {
+		@include span(2);
+		background: url(../img/logo.svg) no-repeat center center/contain;
+	}
+
+	.nav__menu {
+		@include span(10 last);
+		list-style: none;
+		margin: 0;
+		padding: 0 toEm(20px);
+	}
+}
+
+.menu {
+
+	.menu__item {
+		float: right;
+		margin-left: 1em;
+	}
+
+	.menu__link {
+		display: block;
+		text-decoration: none;
+		color: $black;
+		padding: toEm(10px, $nav-font-size);
+
+		&:hover {
+			color: $white;
+			background: $black;
+		}
+	}
+}
