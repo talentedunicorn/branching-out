@@ -8,29 +8,33 @@
 </head>
 <body>
 	<nav class="nav">
-		<ul>
-			<li><a href="#about">About Noyzine</a></li>
-			<li><a href="#zine">Get zine</a></li>
+		<a class="logo" href="/"></a>
+		<ul class="nav__menu menu">
+			<li class="menu__item"><a href="#about" class="menu__link">About Noyzine</a></li>
+			<li class="menu__item"><a href="#zine" class="menu__link">Get zine</a></li>
 		</ul>
 	</nav>
 	<section id="zine" class="section-zine">
-		<img class="zine__cover" src="http://fakeimg.pl/400x600/?text=Zine Placeholder" alt="Noyzine cover">
-		<form class="form" action="#">
-			<fieldset class="form__fieldset">
-				<label for="email_address">Email Address</label>
-				<input id="email_address" type="email" name="email_address">
-			</fieldset>
-			<fieldset class="form__fieldset">
-				<label for="post_address">Postal address</label>
-				<textarea id="post_address" name="post_address" cols="30" rows="10"></textarea>
-			</fieldset>
-			<fieldset class="form__fieldset"><label for="postage"><input id="postage" type="checkbox" name="postage">Get it delivered? (+RM5)</label></fieldset>
-			<input class="form__button_submit" type="submit" value="Pre-Order">
-		</form>
+		<div class="zine__cover"><img class="zine__cover-image" src="http://fakeimg.pl/400x600/?text=Zine Placeholder" alt="Noyzine cover"></div>
+		<div class="form-wrapper">
+			<form class="form" action="#">
+				<fieldset class="form__fieldset">
+					<label for="email_address">Email Address</label>
+					<input id="email_address" type="email" name="email_address" class="form__textfield">
+				</fieldset>
+				<fieldset class="form__fieldset">
+					<label for="post_address">Postal address</label>
+					<textarea id="post_address" name="post_address" rows="8" class="form__textarea"></textarea>
+				</fieldset>
+				<fieldset class="form__fieldset"><input id="postage" type="checkbox" name="postage" class="form__checkbox"><label for="postage" class="form__checkbox-label">Get it delivered? (+RM5)</label></fieldset>
+				<input class="form__button_submit" type="submit" value="Pre-Order">
+			</form>
+		</div>
 	</section>
 
 	<section id="about" class="section-about">
 		<h1 class="about__header">About Noyzine</h1>
+		<p>Sit ipsum qui saepe esse velit repellat deserunt odio quo adipisci error ut iste minus eos. Praesentium vel deserunt eaque mollitia maiores? Repellat optio aspernatur deserunt saepe commodi! Doloremque reprehenderit atque non inventore quos similique molestias excepturi voluptas ratione, ea.</p>
 	</section>
 </body>
 </html>
