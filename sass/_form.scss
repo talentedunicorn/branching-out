@@ -14,6 +14,16 @@
 		outline: none;
 	}
 
+	.form__textfield,
+	.form__textarea {
+		padding: toEm(20px) toEm(20px); 
+		
+		&:focus {
+			background-color: $black;
+			color: $white;
+		}
+	}
+
 	.form__textfield {
 		@extend %full-input;
 		border-bottom: 1px solid $black;
@@ -58,7 +68,7 @@
 
 	.form__button_submit {
 		display: block;
-		font-weight: bold;
+		font-size: 2rem;
 		margin: toEm(20px, 14px) auto;
 		padding: toEm(5px, 14px) toEm(10px, 14px);
 		background: $white;
