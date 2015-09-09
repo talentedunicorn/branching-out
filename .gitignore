@@ -1,5 +1,6 @@
 // Sass
 .sass-cache
+css/*.css*
 
 // Bower
 bower_components
