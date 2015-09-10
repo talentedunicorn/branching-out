@@ -11,10 +11,13 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
 		background: $black;
+
+		@media screen and (min-width: 1200px) {
+			width: 1200px;
+		}
 
 		.menu__link {
 			color: $white;
