@@ -1,8 +1,26 @@
 .nav {
 	@extend .container;
+	background: $white;
 	font-family: $font-family-secondary;
 	font-size: $nav-font-size;
 	border-bottom: 1px solid rgba($black, .5);
+	transition: all ease-in-out .3s;
+
+	&.nav-fixed {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background: $black;
+
+		.menu__link {
+			color: $white;
+
+			&:hover {
+				background: $white;
+				color: $black;
+			}
+		}
+	}
 
 	.logo {
 		@include span(2);
