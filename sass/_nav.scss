@@ -1,7 +1,7 @@
 .nav {
 	@extend .container;
 	background: $white;
-	font-family: $font-family-secondary;
+	font-family: $font-family-primary;
 	font-size: $nav-font-size;
 	border-bottom: 1px solid rgba($black, .5);
 	transition: all ease-in-out .3s;
