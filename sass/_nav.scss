@@ -3,7 +3,6 @@
 	background: $white;
 	font-family: $font-family-primary;
 	font-size: $nav-font-size;
-	border-bottom: 1px solid rgba($black, .5);
 	transition: all ease-in-out .3s;
 
 	&.nav-fixed {
@@ -39,6 +38,10 @@
 		list-style: none;
 		margin: 0;
 		padding: 0 toEm(20px);
+		
+		@media screen and (min-width: 1200px) {
+			padding: 0;
+		}
 	}
 }
 
