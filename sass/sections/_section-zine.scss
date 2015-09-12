@@ -14,7 +14,10 @@
 	}
 
 	.form-wrapper {
-		width: toEm(300px);
 		margin: auto;
+
+		@media screen and (min-width: 300px) {
+			width: toEm(300px);
+		}
 	}
 }
