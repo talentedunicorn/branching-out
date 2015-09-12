@@ -14,10 +14,23 @@
 	}
 
 	.form-wrapper {
-		margin: auto;
+		@extend .span-full;
 
+		/*
 		@media screen and (min-width: 300px) {
 			width: toEm(300px);
+			margin: auto;
+		}
+		*/
+		.form {
+			width: 100%;
+			margin: 30px auto;
+			padding: 0 20px;
+
+			@media screen and (min-width: 300px) {
+				width: 300px;
+				margin: 50px auto;
+			}
 		}
 	}
 }
