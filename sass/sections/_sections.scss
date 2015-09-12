@@ -21,3 +21,20 @@
 		}
 	}
 }
+
+.section-about {
+	background-color: $black;
+	color: $white;
+	
+	.section__content {
+		@extend .container;
+		padding: 0 toEm(20px);
+
+		.about__header, 
+		.about__content {
+			@extend .span-full;
+		}
+
+	}
+
+}
