@@ -13,6 +13,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		background: $black;
+		z-index: 3;
 
 		@media screen and (min-width: 1200px) {
 			width: 1200px;
