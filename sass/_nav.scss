@@ -21,10 +21,12 @@
 
 		.menu__link {
 			color: $white;
+			border-bottom: 2px solid $black;
 
 			&:hover {
-				background: $white;
 				color: $black;
+				background: $white;
+				border-bottom: 2px solid $white;
 			}
 		}
 	}
@@ -58,10 +60,11 @@
 		text-decoration: none;
 		color: $black;
 		padding: toEm(10px, $nav-font-size);
+		border-bottom: 2px solid $white;
+		transition: all ease-in-out .2s;
 
 		&:hover {
-			color: $white;
-			background: $black;
+			border-bottom: 2px solid $black;
 		}
 	}
 }
