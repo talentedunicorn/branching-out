@@ -17,6 +17,10 @@ $susy : (
 	@include container;
 }
 
+.container {
+	@extend %container;
+}
+
 .span-full {
 	@include full;
 }
