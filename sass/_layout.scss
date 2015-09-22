@@ -13,7 +13,7 @@ $susy : (
 
 @include global-box-sizing;
 
-.container {
+%container {
 	@include container;
 }
 

@@ -1,6 +1,6 @@
 // Section: zine
 .section-zine {
-	@extend .container;
+	@extend %container;
 
 	.zine__cover {
 		@extend .span-full;
@@ -40,7 +40,7 @@
 	color: $white;
 	
 	.section__content {
-		@extend .container;
+		@extend %container;
 		padding: 0 toEm(20px);
 
 		.about__header, 
