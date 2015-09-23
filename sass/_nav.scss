@@ -14,10 +14,6 @@
 		background: $black;
 		z-index: 3;
 
-		@media screen and (min-width: 1200px) {
-			width: 1200px;
-		}
-
 		.menu__link {
 			color: $white;
 			border-bottom: 2px solid $black;
@@ -59,7 +55,7 @@
 		text-decoration: none;
 		color: $black;
 		padding: toEm(10px, $nav-font-size);
-		border-bottom: 2px solid $white;
+		border-bottom: 2px solid transparent;
 		transition: all ease-in-out .2s;
 
 		&:hover {
