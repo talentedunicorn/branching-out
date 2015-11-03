@@ -16,12 +16,19 @@ $nav-padding: 20px;
 		background: $black;
 		z-index: 3;
 
-		.logo { 
+		.logo,
+		.menu__link { 
 			color: $white;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		.logo {
+			padding-top: 10px;
+			font-size: 16px;
 		}
 
 		.menu__link {
-			color: $white;
 			border-top: $menu-link-border-height solid transparent;
 
 			&:hover {
@@ -40,6 +47,10 @@ $nav-padding: 20px;
 		text-decoration: none;
 		padding: toEm($nav-padding, 18px);
 		/* background: url(../img/logo.svg) no-repeat center center/contain; */
+
+		&:hover {
+			color: mix($black, $white, 50%);
+		}
 	}
 
 	.nav__menu {
@@ -67,7 +78,7 @@ $nav-padding: 20px;
 		color: $black;
 		padding: toEm($nav-padding, $nav-font-size);
 		border-bottom: $menu-link-border-height solid transparent;
-		transition: all ease-in-out .2s;
+		transition: border ease-in-out .2s;
 
 		&:hover {
 			border-bottom: $menu-link-border-height solid $black;
