@@ -8,9 +8,10 @@ var $window = $(window);
  */
 function fixedNavigation() {
 	var $mainNav = $(".nav");
+	var $zineCoverOffset = $('.zine .zine__cover-image').offset().top;
 	
 	$window.scroll(function() {
-		if ($(this).scrollTop() > $mainNav.height()) {
+		if ($(this).scrollTop() + -$zineCoverOffset > $mainNav.height()) {
 			$mainNav.addClass('nav-fixed');
 		} else {
 			$mainNav.removeClass('nav-fixed');
