@@ -1,8 +1,10 @@
+$menu-link-border-height: 5px;
+$nav-padding: 20px;
+
 .nav {
 	background: $white;
 	font-family: $font-family-primary;
 	font-size: $nav-font-size;
-	transition: all ease-in-out .3s;
 
 	&.nav-fixed {
 		position: fixed;
@@ -63,12 +65,12 @@
 		display: block;
 		text-decoration: none;
 		color: $black;
-		padding: toEm(10px, $nav-font-size);
-		border-bottom: 2px solid transparent;
+		padding: toEm($nav-padding, $nav-font-size);
+		border-bottom: $menu-link-border-height solid transparent;
 		transition: all ease-in-out .2s;
 
 		&:hover {
-			border-bottom: 2px solid $black;
+			border-bottom: $menu-link-border-height solid $black;
 		}
 	}
 }
