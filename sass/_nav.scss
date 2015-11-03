@@ -14,21 +14,30 @@
 		background: $black;
 		z-index: 3;
 
+		.logo { 
+			color: $white;
+		}
+
 		.menu__link {
 			color: $white;
-			border-bottom: 2px solid $black;
+			border-top: $menu-link-border-height solid transparent;
 
 			&:hover {
-				color: $black;
-				background: $white;
-				border-bottom: 2px solid $white;
+/* 				color: $black; */
+/* 				background: $white; */
+				border-top: $menu-link-border-height solid $white;
 			}
 		}
 	}
 
 	.logo {
 		@include span(2);
-		background: url(../img/logo.svg) no-repeat center center/contain;
+		color: $black;
+		font-size: 18px;
+		font-weight: bold;
+		text-decoration: none;
+		padding: toEm($nav-padding, 18px);
+		/* background: url(../img/logo.svg) no-repeat center center/contain; */
 	}
 
 	.nav__menu {
