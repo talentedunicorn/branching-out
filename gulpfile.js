@@ -12,19 +12,31 @@ gulp.task('sass', function() {
 	
 	return sass('./sass/*.scss', conf)
 		.on('error', sass.logError)
-		.pipe(gulp.dest('./css'));
+		.pipe(gulp.dest('./css'))
+		.pipe(connect.reload());
 });
 
 // Connect 
 gulp.task('connect', function() {
-	connect.server();
+	connect.server({
+		root: './',
+		livereload: true,
+	});
+});
+
+// Server
+gulp.task('html', function() {
+	gulp.src('./*.html')
+		.pipe(connect.reload());
 });
 
 // Watch
-gulp.task('sass:watch', function() {
+gulp.task('watch', function() {
 	gulp.watch('./sass/**/*.scss', ['sass']);
+	gulp.watch(['./*.html'], ['html']);
 });
 
 // Default
-gulp.task('default', function() {
+gulp.task('default', ['connect', 'watch'], function() {
+	console.log('Launching noyzine project..');
 });
