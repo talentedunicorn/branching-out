@@ -2,6 +2,7 @@
 
 var gulp = require ('gulp');
 var sass = require('gulp-ruby-sass'); 
+var connect = require('gulp-connect');
 
 // Sass 
 gulp.task('sass', function() {
@@ -12,6 +13,11 @@ gulp.task('sass', function() {
 	return sass('./sass/*.scss', conf)
 		.on('error', sass.logError)
 		.pipe(gulp.dest('./css'));
+});
+
+// Connect 
+gulp.task('connect', function() {
+	connect.server();
 });
 
 // Watch
