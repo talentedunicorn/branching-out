@@ -66,9 +66,10 @@ $nav-padding: 20px;
 }
 
 .menu {
+	text-align: right;
 
 	.menu__item {
-		float: right;
+		display: inline-block;
 		margin-left: 1em;
 	}
 
