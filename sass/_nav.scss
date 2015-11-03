@@ -40,7 +40,7 @@ $nav-padding: 20px;
 	}
 
 	.logo {
-		@include span(2);
+		@include span(3);
 		color: $black;
 		font-size: 18px;
 		font-weight: bold;
@@ -54,7 +54,7 @@ $nav-padding: 20px;
 	}
 
 	.nav__menu {
-		@include span(10 last);
+		@include span(9 last);
 		list-style: none;
 		margin: 0;
 		padding: 0 toEm(20px);

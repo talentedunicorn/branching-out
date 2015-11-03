@@ -4,28 +4,42 @@
 	padding-top: toEm(100px);
 
 	.zine {
-		@include span(8); 
+		padding: 0 toEm(20px);
 
-		.zine__cover {
-			@extend .span-full;
+		.zine-cover,
+		.zine-intro {
+			@include span(12);
+		}
+
+		.zine-cover {
+			margin: toEm(20px) auto;
 
 			.zine__cover-image {
 				display: block;
 				max-width: 100%;
 				height: auto;
-				margin: toEm(20px) auto;
+			}
+		}
+	
+		.zine-intro {
+			margin-top: toEm(20px);
+			padding: 0px toEm(20px) toEm(20px);
+			border-top: 1px solid $black;
+			text-align: center;
+		}
+
+		@include respond-to(medium) {
+			.zine-cover {
+				@include span(8); 
+			}
+			.zine-intro {
+				@include span(4 last);
+				margin-top: toEm(90px);
+				text-align: right;
 			}
 		}
 	}
 
-	.zine-intro {
-		@include span(4 last);
-		margin-top: toEm(20px);
-		padding: toEm(20px);
-		background: $black;
-		color: $white;
-		text-align: center;
-	}
 }
 
 // Section: form

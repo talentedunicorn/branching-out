@@ -5,6 +5,23 @@
 	@return $px / $font-size * 1em;
 }
 
+// Clearfix
+@mixin clearfix {
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// Screen sizes
+$screen-small: 540px; 
+$screen-medium: 960px;
+$screen-large: 1200px;
+
 // Layout media queries - respond-to($size)
 @mixin respond-to($size) {
 	@if $size == small {
