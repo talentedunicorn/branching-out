@@ -18,12 +18,25 @@ function fixedNavigation() {
 		}
 	});
 }
+
+/** 
+ * Function to toggle menu
+ */
+function toggleMenu() {
+	var $menu = $('.nav').find('.menu');
+	var $menuToggle = $('.nav').find('.menu-toggle'); 
+
+	$menuToggle.click(function() {
+		$menu.toggleClass('open');
+	});
+}
 	
 /**
  * Init script
  */
 function init() {
 	fixedNavigation();
+	toggleMenu();
 }
 
 init();
