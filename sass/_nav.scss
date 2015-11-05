@@ -1,4 +1,5 @@
 $menu-link-border-height: 5px;
+$menu-toggle-font-size: 14px;
 $nav-padding: 20px;
 
 .nav {
@@ -42,11 +43,23 @@ $nav-padding: 20px;
 				margin-top: 0px;
 			}
 		}
+
+		@include respond-to(small) {
+			.menu-toggle {
+				margin-top: toEm(5px, $menu-toggle-font-size);
+			}
+		}
+	}
+
+	.logo,
+	.menu-toggle,
+	.nav__menu {
+		@include span(12);
 	}
 
 	.logo,
 	.nav__menu {
-		@include span(12);
+		padding: toEm(10px) toEm(20px);
 	}
 
 	.logo {
@@ -54,11 +67,32 @@ $nav-padding: 20px;
 		font-size: 18px;
 		font-weight: bold;
 		text-decoration: none;
+		text-align: center;
 		padding: toEm($nav-padding, 18px);
 		/* background: url(../img/logo.svg) no-repeat center center/contain; */
 
 		&:hover {
 			color: mix($black, $white, 50%);
+		}
+
+		@include respond-to(medium) {
+			text-align: left;
+		}
+	}
+
+	.menu-toggle {
+		visibility: visible;
+		background: mix($black, $white, 90%);
+		color: $white;
+		border: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: $menu-toggle-font-size;
+		padding: toEm(10px, $menu-toggle-font-size);
+
+		@include respond-to(medium) {
+			visibility: hidden;
+			position: absolute;
 		}
 	}
 
@@ -70,6 +104,17 @@ $nav-padding: 20px;
 		@include respond-to(large) {
 			padding: 0;
 		}
+
+		@include respond-to(small) {
+			visibility: hidden;
+			position: absolute;
+
+			&.open {
+				visibility: visible;
+				position: static;
+			}
+		}
+
 	}
 
 	@include respond-to(medium) {
@@ -88,11 +133,11 @@ $nav-padding: 20px;
 
 	.menu__item {
 		display: block;
-		margin-left: 1em;
 		text-align: center;
 
 		@include respond-to(medium) {
 			display: inline-block;
+			margin-left: 1em;
 		}
 	}
 
