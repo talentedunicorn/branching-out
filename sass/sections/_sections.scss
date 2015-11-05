@@ -1,7 +1,11 @@
+// Sections 
+.sections {
+	padding-top: toEm(60px);
+}
+
 // Section: intro
 .section-intro {
 	@extend %container;
-	padding-top: toEm(100px);
 
 	.zine {
 		padding: 0 toEm(20px);
@@ -23,8 +27,8 @@
 	
 		.zine-intro {
 			margin-top: toEm(20px);
-			padding: 0px toEm(20px) toEm(20px);
-			border-top: 1px solid $black;
+			padding: 0px 0px toEm(20px);
+			border-top: 1px solid mix($black, $white, 10%);
 			text-align: center;
 		}
 
@@ -46,23 +50,16 @@
 .section-form {
 	@extend %container;
 
-
 	.form-wrapper {
 		@extend .span-full;
 
-		/*
-		@media screen and (min-width: 300px) {
-			width: toEm(300px);
-			margin: auto;
-		}
-		*/
 		.form {
 			width: 100%;
-			margin: 30px auto;
+			margin: 10px auto;
 			padding: 0 20px;
 
 			@media screen and (min-width: 300px) {
-				width: 300px;
+				max-width: 400px;
 				margin: 50px auto;
 			}
 		}
