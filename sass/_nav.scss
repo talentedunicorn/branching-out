@@ -91,6 +91,8 @@ $nav-padding: 20px;
 		@include respond-to(medium) {
 			visibility: hidden;
 			position: absolute;
+			width: 0;
+			height: 0;
 		}
 	}
 
