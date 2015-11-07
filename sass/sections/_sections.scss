@@ -113,6 +113,9 @@
 			@extend .span-full;
 		}
 
-	}
+		.about__header {
+			font-family: $font-family-secondary;
+		}
 
+	}
 }
