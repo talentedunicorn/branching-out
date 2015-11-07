@@ -23,15 +23,23 @@
 			margin: toEm(20px) auto;
 
 			.zine__cover-image {
-				display: block;
+				@extend %center-block;
 				max-width: 100%;
 				height: auto;
+			}
+
+			@include respond-to(medium) {
+				margin-left: toEm(-40px);
+				
+				.zine__cover-image {
+					margin-left: 0px;
+				}
 			}
 		}
 	
 		.zine-intro {
 			margin-top: toEm(20px);
-			padding: 0px 0px toEm(20px);
+			padding: toEm(20px) 0px;
 			border-top: 1px solid mix($black, $white, 10%);
 			text-align: center;
 		}
