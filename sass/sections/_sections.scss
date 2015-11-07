@@ -55,25 +55,47 @@
 			}
 		}
 	}
-
 }
 
 // Section: form
 .section-form {
 	@extend %container;
+	
+	.form-writeup-wrapper {
+		@include span(12);
+
+		.form-writeup {
+			background-color: $black;
+			border: 3px solid $black;
+			padding: toEm(30px, 24px);
+			text-align: center;
+			color: $white;
+			font-size: 24px;
+		}
+	}
 
 	.form-wrapper {
-		@extend .span-full;
+		@include span(12);
 
 		.form {
 			width: 100%;
-			margin: 10px auto;
+			margin: toEm(100px) auto;
 			padding: 0 20px;
 
-			@media screen and (min-width: 300px) {
+			@include respond-to(medium) {
 				max-width: 400px;
-				margin: 50px auto;
+				margin-top: 0px;
 			}
+		}
+	}
+
+	@include respond-to(medium) {
+		.form-writeup-wrapper {
+			@include span(4);
+		}
+
+		.form-wrapper {
+			@include span(8 last);
 		}
 	}
 }
