@@ -34,6 +34,13 @@ function toggleMenu() {
 	$menuItem.click(function() {
 		$menuToggle.click();
 	});
+
+	$('.sections').click(function() {
+		if ($menu.hasClass('open')) {
+			$menu.removeClass('open');
+		}
+	});
+
 }
 	
 /**
