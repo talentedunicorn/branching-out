@@ -25,9 +25,14 @@ function fixedNavigation() {
 function toggleMenu() {
 	var $menu = $('.nav').find('.menu');
 	var $menuToggle = $('.nav').find('.menu-toggle'); 
+	var $menuItem = $('.nav').find('.menu__item');
 
 	$menuToggle.click(function() {
 		$menu.toggleClass('open');
+	});
+	
+	$menuItem.click(function() {
+		$menuToggle.click();
 	});
 }
 	
