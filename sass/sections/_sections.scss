@@ -1,6 +1,10 @@
 // Sections 
 .sections {
 	padding-top: toEm(60px);
+
+	& > [class^="section-"] {
+		padding: toEm(50px) toEm(20px);
+	}
 }
 
 // Section: intro
