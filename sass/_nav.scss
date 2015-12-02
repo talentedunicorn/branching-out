@@ -17,6 +17,10 @@ $nav-padding: 20px;
 		background: $black;
 		z-index: 3;
 
+		&+.sections {
+			margin-top: 100px;
+		}
+
 		.logo,
 		.menu__link { 
 			color: $white;

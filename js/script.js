@@ -11,7 +11,7 @@ function fixedNavigation() {
 	var $zineCoverOffset = $('.zine .zine__cover-image').offset().top;
 	
 	$window.scroll(function() {
-		if ($(this).scrollTop() + -$zineCoverOffset > $mainNav.height()) {
+		if ($(this).scrollTop()) {
 			$mainNav.addClass('nav-fixed');
 		} else {
 			$mainNav.removeClass('nav-fixed');
