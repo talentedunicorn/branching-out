@@ -68,9 +68,10 @@
 
 	.form__button_submit {
 		display: block;
-		font-size: 2rem;
+		font-size: 12px;
+		text-transform: uppercase;
 		margin: 30px auto 0;
-		padding: toEm(5px, 14px) toEm(10px, 14px);
+		padding: toEm(10px, 12px) toEm(10px, 12px);
 		background: $white;
 		border: 2px solid $black;
 		transition: ease-in-out all 0.2s;
