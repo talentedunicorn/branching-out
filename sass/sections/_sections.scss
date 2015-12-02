@@ -5,6 +5,15 @@
 	& > [class^="section-"] {
 		padding: toEm(50px) toEm(20px);
 	}
+
+	.section__content {
+		@extend %container;
+		padding: 0 toEm(20px);
+
+		.section__header {
+			font-family: $font-family-secondary;
+		}
+	}
 }
 
 // Section: intro
@@ -104,18 +113,8 @@
 	background-color: $black;
 	color: $white;
 	
-	.section__content {
-		@extend %container;
-		padding: 0 toEm(20px);
-
-		.about__header, 
-		.about__content {
-			@extend .span-full;
-		}
-
-		.about__header {
-			font-family: $font-family-secondary;
-		}
-
+	.section__header, 
+	.about__content {
+		@extend .span-full;
 	}
 }
