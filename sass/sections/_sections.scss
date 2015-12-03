@@ -38,10 +38,10 @@
 			}
 
 			@include respond-to(medium) {
-				margin-left: toEm(-40px);
+				margin-right: toEm(-40px);
 				
 				.zine__cover-image {
-					margin-left: 0px;
+					margin-right: 0px;
 				}
 			}
 		}
@@ -55,10 +55,10 @@
 
 		@include respond-to(medium) {
 			.zine-cover {
-				@include span(8); 
+				@include span(8 last); 
 			}
 			.zine-intro {
-				@include span(4 last);
+				@include span(4);
 				margin-top: toEm(90px);
 				text-align: right;
 			}
