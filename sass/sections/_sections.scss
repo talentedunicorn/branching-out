@@ -119,3 +119,36 @@
 		@extend .span-full;
 	}
 }
+
+.section-artists {
+	@extend %container;
+
+	.artists {
+		@extend %unstyled-list;		
+		@extend %center-block;
+		max-width: 80%;
+
+		.artist-wrapper {
+			@include respond-to(medium) {
+				width: 50%;
+				float: left;
+			}
+
+		}
+		.artist {
+			position: relative;
+			margin: 0 toEm(5px) toEm(10px);
+		}
+
+		.artist-name {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: -18px; /* font-size */
+			padding: toEm(10px);
+			text-align: center;
+			color: $white;
+		}
+	}
+}
