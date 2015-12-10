@@ -18,7 +18,8 @@
 
 // Section: intro
 .section-intro {
-	@extend %container;
+	background: url(../img/section-intro.jpg) no-repeat fixed center center/cover;
+	color: $white;
 
 	.zine {
 		padding: 0 toEm(20px);
