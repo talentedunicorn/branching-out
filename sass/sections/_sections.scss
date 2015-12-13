@@ -126,7 +126,10 @@
 	.artists {
 		@extend %unstyled-list;		
 		@extend %center-block;
-		max-width: 80%;
+
+		@include respond-to(medium) {
+			max-width: 80%;
+		}
 
 		.artist-wrapper {
 			@include respond-to(medium) {
