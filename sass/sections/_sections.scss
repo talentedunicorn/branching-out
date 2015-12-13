@@ -141,17 +141,53 @@
 		.artist {
 			position: relative;
 			margin: 0 toEm(5px) toEm(10px);
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba($black, .8);
+			}
+			
+			&:hover {
+				&:after {
+					display: none;
+					transition: all ease-in-out .3s;
+				}
+			}
+
+		}
+
+		.artist-image {
+			@extend %center-block;
 		}
 
 		.artist-name {
 			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%);
-			margin-top: -18px; /* font-size */
-			padding: toEm(10px);
+			/* top: 50%; */
+			/* left: 50%; */
+			/* transform: translateX(-50%); */
+			/* margin-top: -18px; /1* font-size *1/ */
+			right: 20px;
+			bottom: 0px;
+			z-index: 1;
+			padding: toEm(20px);
+			font-size: 14px;
+			font-weight: 100;
+			text-transform: uppercase;
 			text-align: center;
 			color: $white;
+			border: 1px solid $white;
+			cursor: pointer;
+
+			&:hover {
+				background: $black;
+				border-color: $black;
+				transition: all ease-in-out .1s;
+			}
 		}
 	}
 }
