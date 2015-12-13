@@ -1,0 +1,7 @@
+sass/*
+.sass-cache/*
+.node_modules/*
+.gitignore
+package.json
+bower.json
+gulpfile.js
