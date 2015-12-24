@@ -42,6 +42,26 @@ function toggleMenu() {
 	});
 
 }
+
+/** 
+ * Function to toggle artist card
+ */
+function toggleCards() {
+	var $artistWrapper = $('.artist-wrapper');
+	var $artistToggle = $artistWrapper.find('.artist-name');
+	var $close = $artistWrapper.find('.close');
+
+	$artistToggle.click(function() {
+		$(this).parents('.artist-wrapper').addClass('opened')
+			.siblings('.artist-wrapper').removeClass('opened');
+	});
+
+	$close.click(function(e) {
+		$(this).parents('.artist-wrapper').removeClass('opened');
+	});
+
+
+}
 	
 /**
  * Init script
@@ -49,6 +69,7 @@ function toggleMenu() {
 function init() {
 	fixedNavigation();
 	toggleMenu();
+	toggleCards();
 }
 
 init();
