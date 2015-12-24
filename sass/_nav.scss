@@ -21,17 +21,21 @@ $nav-padding: 20px;
 			margin-top: 100px;
 		}
 
-		.logo,
+		.logo-link,
 		.menu__link { 
 			color: $white;
 			padding-top: 5px;
 			padding-bottom: 5px;
 		}
 
-		.logo {
+		.logo-link {
 			font-size: 16px;
 			padding-top: toEm(10px, 16px);
 			padding-bottom: toEm(10px, 16px);
+
+			.logo path {
+				fill: $white;
+			}
 		}
 
 		.menu__link {
@@ -51,34 +55,34 @@ $nav-padding: 20px;
 
 	}
 
-	.logo,
+	.logo-link,
 	.menu-toggle,
 	.nav__menu {
 		@include span(12);
 	}
 
-	.logo,
+	.logo-link,
 	.nav__menu {
 		margin: toEm(10px) 0;
 		padding: toEm(10px) toEm(20px);
 	}
 
-	.logo {
+	.logo-link {
 		color: $black;
 		font-size: 18px;
 		font-weight: bold;
 		text-decoration: none;
 		text-align: center;
 		padding: toEm(10px, 18px) toEm(20px, 18px);
-		/* background: url(../img/logo.svg) no-repeat center center/contain; */
 
 		&:hover {
 			color: mix($black, $white, 50%);
 		}
 
 		@include respond-to(medium) {
-			text-align: left;
+			width: auto;
 		}
+		
 	}
 
 	.menu-toggle {
@@ -121,10 +125,6 @@ $nav-padding: 20px;
 	}
 
 	@include respond-to(medium) {
-		.logo {
-			@include span(3);
-		}
-		
 		.nav__menu {
 			@include span(9 last);
 		}
