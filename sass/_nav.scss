@@ -30,11 +30,12 @@ $nav-padding: 20px;
 
 		.logo-link {
 			font-size: 16px;
-			padding-top: toEm(10px, 16px);
-			padding-bottom: toEm(10px, 16px);
 
-			.logo path {
-				fill: $white;
+			.logo {
+				height: toEm(38px);
+				path {
+					fill: $white;
+				}
 			}
 		}
 
@@ -61,7 +62,6 @@ $nav-padding: 20px;
 		@include span(12);
 	}
 
-	.logo-link,
 	.nav__menu {
 		margin: toEm(10px) 0;
 		padding: toEm(10px) toEm(20px);
@@ -73,7 +73,6 @@ $nav-padding: 20px;
 		font-weight: bold;
 		text-decoration: none;
 		text-align: center;
-		padding: toEm(10px, 18px) toEm(20px, 18px);
 
 		&:hover {
 			color: mix($black, $white, 50%);
@@ -83,6 +82,10 @@ $nav-padding: 20px;
 			width: auto;
 		}
 		
+		.logo {
+			height: toEm(50px);
+			margin: toEm(6px);
+		}
 	}
 
 	.menu-toggle {
